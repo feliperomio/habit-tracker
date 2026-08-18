@@ -1,17 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {{config('app.name')}}
+    </title>
 
-<h1>Welcome the home page</h1>
+    @vite('resources/css/app.css')
 
-<p>
-    Olá, {{$name}}!
-</p>
+</head>
 
-<p>
-    Seus hábitos são:
-</p>
+<body>
+    <h1 class="text-3xl font-bold underline text-red-500">
+        Hello world!
+    </h1>
+</body>
 
-<ul>
-    @foreach ($habits as $habit)
-        <li>{{ $habit }}</li>
-    @endforeach
-</ul>
+</html>
