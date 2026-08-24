@@ -1,0 +1,3 @@
+criar um pasta de components dentro de view, e criar o 
+header, footer e layout, assim fica muito mais facil 
+para criar as outras paginas
