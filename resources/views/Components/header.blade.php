@@ -8,6 +8,23 @@
     {{--Github--}}
     <div>
         github
+
+        @auth
+        
+        <a href="/logout" class="bg-white p-2 border-2">
+            Logout
+        </a>
+        @endauth
+
+
+        @guest
+        <a href="/login" class="bg-white p-2 border-2">
+            Login
+        </a>
+        @endguest
+
+
+
     </div>
 
 
