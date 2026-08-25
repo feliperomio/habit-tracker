@@ -5,5 +5,14 @@
         <h1>
             Veja seus hábitos ganharem vida
         </h1>
+
+        @auth
+        <p>
+            @dd(auth()->user())
+            Bem vindo(a), {{auth()->user()->name}}
+        </p>
+        @endauth
+
+
     </main>
 </x-layout>

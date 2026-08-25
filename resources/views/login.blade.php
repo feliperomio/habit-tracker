@@ -5,5 +5,40 @@
         <h1>
             faça login
         </h1>
+
+        <section class="mt-4">
+            <form action="/login" method="POST">
+                @csrf
+
+                <div>
+                    @error('email')
+                    <p class="text-red-500 text-xs mt-1">
+                        {{ $message }}
+                    </p>
+                    @enderror
+                </div>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    class="bg-white p-2 border-2">
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="*********"
+                    class="bg-white p-2 border-2">
+
+                <button
+                    type="submit"
+                    class="bg-white p-2 border-2">
+                    Entrar
+                </button>
+            </form>
+        </section>
+
+
+
     </main>
 </x-layout>
