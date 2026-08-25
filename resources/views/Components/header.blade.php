@@ -10,10 +10,12 @@
         github
 
         @auth
-        
-        <a href="/logout" class="bg-white p-2 border-2">
-            Logout
-        </a>
+        <form class="inline" action="/logout" method="POST">
+            @csrf
+            <button type="submit" class="bg-white p-2 border-2">
+                Sair
+            </button>
+        </form>
         @endauth
 
 
