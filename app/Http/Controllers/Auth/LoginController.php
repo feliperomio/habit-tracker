@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\LoginRequest; 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -14,12 +15,9 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function authenticate(Request $request)
+    public function authenticate(LoginRequest $request)
     {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|min:6', 
-             ]);
+        $credentials = $request->only('email', 'password'); //obtém apenas os campos de email e senha do request.
         if(Auth::attempt($credentials)){
             $request -> session()->regenerate(); //se o usuário informar as credenciais corretas, a sessão é regenerada para evitar ataques de fixação de sessão.
 
