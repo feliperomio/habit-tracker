@@ -10,7 +10,7 @@
         github
 
         @auth
-        <form class="inline" action="/logout" method="POST">
+        <form class="inline" action="{{ route('auth.logout') }}" method="POST">
             @csrf
             <button type="submit" class="bg-white p-2 border-2">
                 Sair
@@ -20,7 +20,7 @@
 
 
         @guest
-        <a href="/login" class="bg-white p-2 border-2">
+        <a href="{{ route('site.login') }}" class="bg-white p-2 border-2">
             Login
         </a>
         @endguest
